@@ -1,0 +1,7 @@
+---
+  - name: Deploy light controller to raspberry pi
+    host: raspberryPI
+    become: true
+    tasks:
+      - name: copy script file
+        copy: src=light_controller.py dest=/home/lightoff 

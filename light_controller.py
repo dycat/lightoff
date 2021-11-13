@@ -10,7 +10,6 @@ class LightController:
         subprocess.run("echo 1 | sudo tee /sys/class/leds/led1/brightness", shell=True)
 
 
-
 if __name__ == "__main__":
     light_contrl = LightController()
     light_contrl.turn_off()
