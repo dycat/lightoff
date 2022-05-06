@@ -1,7 +1,14 @@
 ---
   - name: Deploy light controller to raspberry pi
-    host: raspi
+    hosts: raspi
+    gather_facts: no
     become: true
     tasks:
       - name: copy script file
-        copy: src=light_controller.py dest=/home/lightoff 
+        copy: src=light_controller.py dest=/home/light_controller.py
+      
+      - name: Install systemd configure
+        template: src=offlight.service dest=/etc/systemd/system/offlight.service
+
+      - name: start service
+        systemd: state=started name=offlight daemon_reload=yes

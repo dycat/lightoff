@@ -1,0 +1,8 @@
+[Unit]
+Description=Turn off raspberry Pi light
+
+[Service]
+ExecStart=/usr/bin/python3 /home/light_controller.py
+
+[Install]
+WantedBy=default.target
