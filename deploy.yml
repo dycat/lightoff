@@ -1,6 +1,6 @@
 ---
   - name: Deploy light controller to raspberry pi
-    host: raspberryPI
+    host: raspi
     become: true
     tasks:
       - name: copy script file
