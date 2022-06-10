@@ -1,6 +1,6 @@
 ---
   - name: Deploy light controller to raspberry pi
-    hosts: raspi
+    hosts: local
     gather_facts: no
     become: true
     tasks:

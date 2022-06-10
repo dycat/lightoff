@@ -16,3 +16,8 @@ pipenv install
 pipenv shell
 ansible-playbook deploy.yml -i ~/.ansible/hosts
 ```
+
+To skip ask sudo password, in `/etc/sudoers.d`, make a new file named by your username:
+```
+[YOUR USERNAME] ALL=(ALL) NOPASSWD:ALL
+```
