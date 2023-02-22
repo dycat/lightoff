@@ -11,4 +11,4 @@
         template: src=offlight.service dest=/etc/systemd/system/offlight.service
 
       - name: start service
-        systemd: state=started name=offlight daemon_reload=yes
+        systemd: state=started name=offlight daemon_reload=yes enabled=true
