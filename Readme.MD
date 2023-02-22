@@ -10,7 +10,13 @@ The script could turn off and on the light of Raspberry pi. You could deploy it 
 
 ## Usage
 
-Modify `hosts` in `delopy.yml` to your hosts name. Then in shell:
+Modify `hosts` in `delopy.yml` to your hosts name. 
+
+An Example hosts file:
+    [local]
+    server_ip ansible_ssh_private_key_file=[path to file] ansible_user=[server username]
+
+Then in shell:
 ```
 pipenv install
 pipenv shell
